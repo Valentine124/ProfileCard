@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Rubik" sans-serif;
+    font-size: 1.5rem;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.profile-card {
+    background-color: #FFFFFF;
+    width: 92%;
+    align-self: center;
+    padding: 2rem 0.8rem;
+    border: 1px solid #6B7280;
+    border-radius: 4px;
+}
+
+.profile-header {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-header img {
+    border-radius: 50%;
+    border: 0.3rem solid #3B82F6;
+}
+
+.profile-header figcaption {
+    text-align: center;
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+.profile-header figcaption span {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #6B7280;
+}
+
+.profile-section {
+    padding-top: 2rem;
+}
+
+.profile-section ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    font-size: 0.875rem;
+}
+
+.profile-section ul li {
+    padding: 1rem 1.5rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    background-color: #E0F2FE;
+    color: #3B82F6;
+    border-radius: 1.5rem;
+}
+
+.profile-section .dislikes li {
+    background-color: #E5E7EB;
+    color: #374151;
+}
+
+.profile-section .social li a {
+    color: #3B82F6;
+}
+
+.profile-section h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #111827;
+}
+
+.section-bio {
+    text-align: center;
+    color: #6B7280;
+}
+
+.section-bio p {
+    font-size: 0.9375rem;
+    margin-bottom: 1rem;
+}
+
+.section-bio time {
+    font-size: 0.8125rem;
+}
+
+/* Style for tablets */
+
+@media (min-width: 600px) {
+    .profile-card {
+        width: 60%;
+        padding: 2rem 2rem;
+    }
+}
+
+/* Style for desktops */
+@media (min-width: 992px) {
+    .profile-card {
+        width: 70%;
+        padding: 2rem 3rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .profile-card .profile-header::after {
+        content: "";
+        width: 2px;
+        height: 15rem;
+        background-color: #D1D5DB;
+        margin: 0 6rem;
+
+    }
+}
