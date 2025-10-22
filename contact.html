@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./contact.css">
+        <title>Contact</title>
+    </head>
+    <body>
+        <nav class="nav">
+            <ul>
+                <li><a href="./index.html">Profile</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <form id="form-c" novalidate>
+            <div class="contact-form">
+                <h2>Contact Me</h2>
+
+                <div class="form-content">
+                    <label for="name" class="inp-label">FullName</label>
+                    <input type="text" id="name" class="inp" name="name" placeholder="Uka Chibuike" data-testid="test-contact-name" aria-discribedby="error-name" required>
+                    <p id="error-name" class="error-msg" role="alert" data-testid="test-contact-error-name" aria-live="assertive"></p>
+
+                    <label for="email" class="inp-label">Email</label>
+                    <input type="email" id="email" class="inp" name="email" placeholder="email@host.com" data-testid="test-contact-email" aria-describedby="error-email" required>
+                    <p id="error-email" class="error-msg" role="alert" data-testid="test-contact-error-email" arial-live="assertive"></p>
+
+                    <label for="subject" class="inp-label">Subject</label>
+                    <input type="text" id="subject" class="inp" name="subject" placeholder="Regarding..." data-testid="test-contact-subject" aria-describedby="error-subject" required>
+                    <p id="error-subject" class="error-msg" role="alert" data-testid="test-contact-error-subject" aria-live="assertive"></p>
+
+                    <label for="message" class="inp-label">Message</label>
+                    <textarea id="message" class="inp inp-ta" name="message" placeholder="Write your message here..." rows="4" data-testid="test-contact-message" aria-describedby="error-message" required></textarea>
+                    <p id="error-message" class="error-msg" role="alert" data-testid="test-contact-error-message" aria-live="assertive"></p>
+
+                    <button type="submit" data-testid="test-contact-submit">Send</button>
+                </div>
+            </div>
+
+            <dialog id="success-dialog" data-testid="test-contact-success">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="currentColor" d="M10 20a10 10 0 0 1 0-20a10 10 0 1 1 0 20m-2-5l9-8.5L15.5 5L8 12L4.5 8.5L3 10z"/></svg>
+                <p>Your message has been sent successfully!</p>
+            </dialog>
+        </form>
+
+        <script src="./contact.js"></script>
+    </body>
+</html>

@@ -1,0 +1,150 @@
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 90%;
+    max-width: 400px;
+}
+
+.contact-form h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0F172A;
+    text-align: center;
+}
+
+.inp, .inp-label {
+    display: block;
+}
+
+.inp-label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #0F172A;
+    margin-bottom: 0.5rem;
+}
+
+.inp {
+    width: 100%;
+    height: 3rem;
+    padding: 0.75rem 1rem;
+    outline: none;
+    border: 1px solid #CBD5E1;
+    border-radius: 1.5rem;
+    color: #0F172A;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.inp-ta {
+    height: 8rem;
+}
+
+:-ms-input-placeholder, ::-ms-input-placeholder, ::placeholder {
+    color: #64748B;
+    font-size: 1rem;
+    opacity: 1;
+}
+
+.contact-form button {
+    width: 100%;
+    height: 3rem;
+    margin-top: 2rem;
+    background-color: #007BFF;
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.error-msg {
+    color: #DC2626;
+    font-size: 0.875rem;
+    margin-top: -2rem;
+    margin-bottom: 4rem;
+}
+
+#success-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    border: none;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+    max-width: 90%;
+    width: 300px;
+    z-index: 1000;
+}
+
+#success-dialog svg {
+    color: #16A34A;
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 1rem;
+}
+
+#success-dialog p {
+    font-size: 1rem;
+    color: #0F172A;
+}
+
+#success-dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* For tablets */
+@media (min-width: 600px) {
+    .contact-form {
+        max-width: 500px;
+    }
+}
+
+/* For desktops */
+@media (min-width: 900px) {
+    .contact-form {
+        max-width: 60%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .contact-form h2 {
+        flex: 1;
+        text-align: left;
+        font-size: 2rem;
+    }
+
+    .contact-form .inp, .contact-form button {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .contact-form h2::after {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 4px;
+        background-color: #007BFF;
+        margin-top: 0.5rem;
+    }
+
+    .contact-form .form-content {
+        flex: 2;
+    }
+}
+
